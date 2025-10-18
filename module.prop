@@ -1,0 +1,7 @@
+id=clang21
+name=clang21 with ndk r29 
+version=21.0.0-v1.0.0
+versionCode=3
+author=Bernd.Schemmer@gmx.de
+description=clang21, make, pkg-config, pkgconf, and the sysroot from the NDK r29 for Android
+

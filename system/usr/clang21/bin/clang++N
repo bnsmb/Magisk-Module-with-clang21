@@ -1,0 +1,9 @@
+#!/system/bin/env sh
+[ ${TRACE}x != ""x ] && set -x
+
+bin_dir=`dirname "$0"`
+P=""
+[[ $* != *--target=aarch64-linux-android* ]] && P="$P --target=aarch64-linux-android${API} "
+
+$PREFIX "$bin_dir/clang++" $P "$@"
+

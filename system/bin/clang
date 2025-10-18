@@ -1,0 +1,21 @@
+#!/system/bin/env sh
+[ ${TRACE}x != ""x ] && set -x
+
+if [ "${API}"x = ""x ] ; then
+  echo "
+*** ERROR: execute
+
+source /system/bin/init_clang21_env
+
+before using the clang
+"
+  exit 100
+fi
+
+bin_dir=/system/usr/clang21/bin/
+
+P=""
+# [[ $* != *--target=aarch64-linux-android* ]] && P="$P --target=aarch64-linux-android${API} "
+
+$PREFIX "$bin_dir/clang" $P "$@"  
+
